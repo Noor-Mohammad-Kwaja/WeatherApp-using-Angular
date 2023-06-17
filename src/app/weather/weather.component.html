@@ -1,0 +1,19 @@
+
+<div class = "container">
+    <h1 class="h2c" >Weather App</h1>
+<div>
+    <input type="text" [(ngModel)]="city" placeholder="Enter city name">
+
+    <button class="button" style="vertical-align:middle" (click)="getWeather()"><span>Get Weather</span></button>
+</div>
+
+<div class="data" *ngIf="weatherData">
+    <h3>{{ weatherData.name }}</h3>
+    <div>
+        <fa-icon [icon]="faCloudSunRain"></fa-icon>
+    </div>
+    <p>Temperature: {{ weatherData.main.temp }}°C <fa-icon [icon]="faTemperatureHalf"></fa-icon></p>
+    <p>Feels Like: {{ weatherData.main.feels_like }}°C <fa-icon [icon]="faTemperatureHalf"></fa-icon></p>
+    <p>Weather: {{ weatherData.weather[0].main }}</p>
+</div>
+</div>
