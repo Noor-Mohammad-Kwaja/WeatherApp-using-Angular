@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 providedIn: 'root'
 })
 export class WeatherService {
-private apiKey = 'cc952b73961d1af8d8b3839d631bed08';
+private apiKey = 'Your API Key';   //enter your openweather API key here
 
 constructor(private http: HttpClient) { }
 
